@@ -1,0 +1,51 @@
+def ordena_tres_numeros(valor1, valor2, valor3):
+    if valor1 > valor2:
+        valor1, valor2 = valor2, valor1
+    if valor2 > valor3:
+        valor2, valor3 = valor3, valor2
+    if valor1 > valor2:
+        valor1, valor2 = valor2, valor1
+    print (valor1, valor2, valor3)
+
+def main():
+    ordena_tres_numeros(30, 20, 10)
+    ordena_tres_numeros(15, 20, 10)
+    ordena_tres_numeros(30, 10, 20)
+    ordena_tres_numeros(30, 15, 40)
+
+
+def decompoe_numero(valor):
+    print(valor % 10)
+    print((valor // 10) % 10)
+    print(valor // 100)
+
+def e_multiplo(valor, divisor):
+    if valor % divisor == 0:
+        print('É múltiplo de', divisor, '.')
+    else:
+        print('Não é múltiplo de', divisor, '.')
+
+def informa_pares():
+    for i in range(3):
+        valor = int(input('Insira um número. \n'))
+        e_multiplo(valor, 2)
+
+def informa_maior():
+    maximo = 0
+    for i in range(3):
+        valor = int(input('Insira um número. \n'))
+        if valor > maximo:
+            maximo = valor
+    print('O maior valor inserido é', maximo)
+
+def informa_maior_alt():
+    numeros = []
+    for i in range(3):
+        numeros.append(int(input('Informe um valor. \n')))
+    print(max(numeros))
+
+
+def main():
+    informa_maior_alt()
+
+main()
